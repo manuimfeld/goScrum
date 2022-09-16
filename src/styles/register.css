@@ -1,0 +1,140 @@
+.form-container {
+    height: auto;
+    width: calc(100vw - 40px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.form-container li {
+    margin-bottom: 15px;
+}
+
+.form-container form label {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.form-container input, .form-container select {
+    height: calc(38px - 2px);
+    border-radius: 8px;
+    border: 1px solid #E5E5E5;
+    background: #FFFFFF;
+    outline: none;
+}
+
+.form-container input {
+    width: calc(100% - 12px);
+    padding: 0 0 0 10px;
+}
+
+.form-container select {
+    width: calc(100% - 7px);
+    padding: 0 0 0 5px;
+    color: #3E4542;
+    font-size: 12px;
+}
+
+.form-container form ul :nth-child(4) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form-container #checkbox-p {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+/* SLIDER */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 14px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFC5BE;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    bottom: -2px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider::after {
+    background-color: #FF452B;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+    background-color: #FF452B;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .form-container form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 0px;
+    width: calc(100% - 10px);
+    background-color: #FF452B;
+    color: #FFFFFF;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
