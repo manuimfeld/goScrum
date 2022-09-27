@@ -10,8 +10,8 @@
     background: #FFFFFF;
 }
 
-.createTask-section, .filters-section {
-    height: calc(100vh - 20px);
+.createTask-section, .tasks-section {
+    min-height: calc(100vh - 20px);
     width: calc(100vw - 40px);
     margin: 0 21px 0 10px;
     padding: 0 10px;
@@ -22,7 +22,7 @@
     grid-area: create-task;
 }
 
-.filters-section {
+.tasks-section {
     grid-area: task;
     background: #E5E5E5;
     border-radius: 8px;
@@ -104,16 +104,16 @@
         align-items: flex-start;
     }
 
-    .createTask-section, .filters-section {
-        height: calc(100vh - 5vh);
+    .createTask-section, .tasks-section {
+        min-height: calc(100vh - 5vh);
         width: calc(50vw - 40px);
         padding: 0 10px 0 10px;
         margin: 20px 0;
     }
 
-    .filters-section {
+    /* .tasks-section {
         width: calc(50vw - 30px);
-    }
+    } */
 
     .createTask, .filtersTask {
         width: 100%;

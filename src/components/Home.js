@@ -1,14 +1,16 @@
 import React from "react";
 import CreateTask from "./CreateTask";
 import "../styles/home.css";
-import FiltersTask from "./FiltersTask";
+import TasksView from "./TasksView";
+import Header from "./Header";
 
 const Home = () => {
   return (
     <>
+      <Header />
       <div className="layout">
         <CreateTask />
-        <FiltersTask />
+        <TasksView />
       </div>
     </>
   );

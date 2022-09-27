@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
+import login from "../helpers/login";
 
 const schema = Yup.object().shape({
   email: Yup.string().email("invalid").required("Ingrese su email"),
@@ -17,6 +18,7 @@ const Login = () => {
           password: "",
         }}
         validationSchema={schema}
+        onSubmit={(email, password) => login(email, password)}
       >
         {({ errors, touched }) => (
           <Form>
