@@ -4,13 +4,13 @@ import "../styles/home.css";
 import TasksView from "./TasksView";
 import Header from "./Header";
 
-const Home = () => {
+const Home = ({ taskList, setTaskList }) => {
   return (
     <>
       <Header />
       <div className="layout">
-        <CreateTask />
-        <TasksView />
+        <CreateTask taskList={taskList} setTaskList={setTaskList} />
+        <TasksView taskList={taskList} />
       </div>
     </>
   );

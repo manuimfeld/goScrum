@@ -1,13 +1,19 @@
 import React from "react";
 import { Form, Formik } from "formik";
 
-const CreateTask = ({ errors, touched }) => {
+const CreateTask = ({ taskList, setTaskList }) => {
   const formSubmit = (e) => {
     e.preventDefault();
-    const titleTask = e.target[0].value;
-    const statusTask = e.target[1].value;
-    const priorityTask = e.target[2].value;
-    const textTask = e.target[3].value;
+    const taskObj = {
+      titleTask: e.target[0].value,
+      statusTask: e.target[1].value,
+      priorityTask: e.target[2].value,
+      textTask: e.target[3].value,
+    };
+
+    let newList = [...taskList];
+    newList.push(taskObj);
+    setTaskList(newList);
   };
 
   return (
