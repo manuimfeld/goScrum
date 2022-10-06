@@ -5,13 +5,13 @@ const FormRegister = ({ errors, touched, values, formSubmit }) => {
   return (
     <>
       <h1>Registro</h1>
-      <Form onSubmit={(e) => formSubmit(e)}>
+      <Form onSubmit={(e) => formSubmit(e, values)}>
         <ul>
           <li>
-            <label htmlFor="firstName">Nombre de usuario</label>
-            <Field name="firstName" />
-            {errors.firstname && touched.firstname ? (
-              <div className="msg-error-form">{errors.firstname}</div>
+            <label htmlFor="userName">Nombre de usuario</label>
+            <Field name="userName" />
+            {errors.userName && touched.userName ? (
+              <div className="msg-error-form">{errors.userName}</div>
             ) : null}
           </li>
           <li>
@@ -44,41 +44,43 @@ const FormRegister = ({ errors, touched, values, formSubmit }) => {
           </li>
           {values.switch && (
             <li>
-              <label htmlFor="id_group">
+              <label htmlFor="teamID">
                 Por favor, introduce el identificador de equipo
               </label>
-              <Field name="id_group" />
-              {errors.id_group && touched.id_group ? (
-                <div className="msg-error-form">{errors.id_group}</div>
+              <Field name="teamID" />
+              {errors.teamID && touched.teamID ? (
+                <div className="msg-error-form">{errors.teamID}</div>
               ) : null}
             </li>
           )}
 
           <li>
-            <label htmlFor="rol">Rol</label>
-            <Field name="rol" as="select" id="rol">
-              <option value="Team Member" defaultValue>
+            <label htmlFor="role">Rol</label>
+            <Field name="role" as="select" id="role">
+              <option value="Team Member" default>
                 Team Member
               </option>
-              <option value="Teach Leader">Teach Leader</option>
+              <option value="Team Leader">Team Leader</option>
             </Field>
           </li>
           <li>
             <label htmlFor="continent">Continente</label>
             <Field name="continent" as="select" id="continent">
-              <option value="America" defaultValue>
+              <option value="America" default>
                 America
               </option>
               <option value="Europa">Europa</option>
+              <option value="Otro">Otro</option>
             </Field>
           </li>
           <li>
             <label htmlFor="select-region">Región</label>
             <Field name="region" as="select" id="region">
-              <option value="America del Norte" defaultValue>
-                America del Norte
+              <option value="Latam" default>
+                Latam
               </option>
-              <option value="America del Sur">America del Sur</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Otro">Otro</option>
             </Field>
           </li>
           <li>

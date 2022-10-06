@@ -8,7 +8,7 @@ import formSubmit from "../../helpers/register";
 const Register = () => {
   /* FORM VALIDATORS */
   const SignupSchema = Yup.object().shape({
-    firstname: Yup.string()
+    userName: Yup.string()
       .min(6, "El nombre de usuario debe contener al menos seis carácteres!")
       .max(18, "El nombre de usuario debe tener como máximo 18 carácteres")
       .matches(
@@ -27,7 +27,7 @@ const Register = () => {
     email: Yup.string()
       .email("Email inválido")
       .required("Este campo es obligatorio"),
-    id_group: Yup.string(),
+    teamID: Yup.string(),
     rol: Yup.string(),
     continent: Yup.string(),
     region: Yup.string(),
@@ -37,19 +37,16 @@ const Register = () => {
     <div className="form-container">
       <Formik
         initialValues={{
-          firstName: "Manuel",
+          userName: "Manuel",
           password: "",
           email: "pruebaemail@hotmail.com",
-          id_group: "",
+          teamID: "9cdbd108-f924-4383-947d-8f0cd6510da1",
           switch: false,
-          rol: "",
-          continent: "",
-          region: "",
+          role: "Team Member",
+          continent: "America",
+          region: "Latam",
         }}
         validationSchema={SignupSchema}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
       >
         {({ errors, touched, values }) => (
           <FormRegister

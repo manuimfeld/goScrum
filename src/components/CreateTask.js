@@ -5,10 +5,13 @@ const CreateTask = ({ taskList, setTaskList }) => {
   const formSubmit = (e) => {
     e.preventDefault();
     const taskObj = {
-      titleTask: e.target[0].value,
-      statusTask: e.target[1].value,
-      priorityTask: e.target[2].value,
-      textTask: e.target[3].value,
+      user: "Manuel",
+      title: e.target[0].value,
+      progress: e.target[1].value,
+      order: e.target[2].value,
+      content: e.target[3].value,
+      fecha: "6/2/2021",
+      hora: "1:22:59",
     };
 
     let newList = [...taskList];
