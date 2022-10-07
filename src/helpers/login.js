@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const login = (email, pass) => {
+const formSubmit = (email, pass) => {
   const endpoint = "http://localhost:3000/";
   axios
     .post(endpoint, email, pass)
@@ -12,4 +12,4 @@ const login = (email, pass) => {
     });
 };
 
-export default login;
+export default formSubmit;

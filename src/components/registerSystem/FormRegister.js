@@ -9,7 +9,7 @@ const FormRegister = ({ errors, touched, values, formSubmit }) => {
         <ul>
           <li>
             <label htmlFor="userName">Nombre de usuario</label>
-            <Field name="userName" />
+            <Field name="userName" placeholder="Francisco" />
             {errors.userName && touched.userName ? (
               <div className="msg-error-form">{errors.userName}</div>
             ) : null}
@@ -23,7 +23,7 @@ const FormRegister = ({ errors, touched, values, formSubmit }) => {
           </li>
           <li>
             <label htmlFor="email">Email</label>
-            <Field name="email" />
+            <Field name="email" placeholder="falvarez@hotmail.com" />
             {errors.email && touched.email ? (
               <div className="msg-error-form">{errors.email}</div>
             ) : null}

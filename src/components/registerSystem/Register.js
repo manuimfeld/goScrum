@@ -37,9 +37,9 @@ const Register = () => {
     <div className="form-container">
       <Formik
         initialValues={{
-          userName: "Manuel",
+          userName: "",
           password: "",
-          email: "pruebaemail@hotmail.com",
+          email: "",
           teamID: "9cdbd108-f924-4383-947d-8f0cd6510da1",
           switch: false,
           role: "Team Member",
