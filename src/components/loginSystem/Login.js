@@ -6,6 +6,7 @@ import FormLogin from "./FormLogin";
 import formSubmit from "../../helpers/login";
 
 const schema = Yup.object().shape({
+  userName: Yup.string(),
   email: Yup.string().email("invalid").required("Ingrese su email"),
   password: Yup.string().min(6, "mínimo 6 caracteres"),
 });
@@ -15,6 +16,7 @@ const Login = () => {
     <div>
       <Formik
         initialValues={{
+          userName: "",
           email: "",
           password: "",
         }}
